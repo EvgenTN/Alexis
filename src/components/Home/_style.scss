@@ -1,0 +1,56 @@
+.home {
+  position: relative;
+  min-height: 770px;
+  height: 1px;
+  text-align: center; 
+  background: url(../images/back.jpeg) no-repeat center center;
+  background-size: cover;
+  // background-repeat: no-repeat;
+  &:after{
+    z-index: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(13, 13, 14, 0.8);
+  }
+  
+  .wrapper{
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+   
+  }
+  .title{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 60px;
+    line-height: 85px;
+    color: $white;
+    // width: 80%;
+  }
+  .boxes{
+    .box{
+      img{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      &.green{
+        p{color:$green}
+      }
+      &.purpure{
+        p{color:$purpure}
+      }
+      &.yellow{
+        p{color:$yellow}
+      }
+    }
+  }
+}
