@@ -1,15 +1,17 @@
 body {
   font-family: 'Poppins', sans-serif;
+  color: $defaultTextColor;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;
   height: 100%;
   // background: grey;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+
   padding: 15px;
 }
 .button {

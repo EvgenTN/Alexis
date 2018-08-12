@@ -62,7 +62,7 @@ export default class Header extends Component {
     return (
       <div className='header'>
         <nav className='navbar navbar-expand'>
-          <a className='logo navbar-brand' href='#'>
+          <a className='logo navbar-brand' href='/'>
             <img
               src={logo2x}
               alt='logo'
@@ -76,7 +76,7 @@ export default class Header extends Component {
                   <a
                     key={id}
                     href={item.href}
-                    className='nav-item nav-link ${item.exact}'
+                    className= {`nav-item nav-link ${item.exact}`}
                   >
                     {item.name}
                   </a>

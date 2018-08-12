@@ -3,7 +3,7 @@ import {
   money,
   watch,
   check,
-  
+
 } from '../../assets/images'
 
 export default (props) => {
@@ -41,7 +41,10 @@ export default (props) => {
               {
                 box.map((item, id) => {
                   return (
-                    <div className={`col-4 box ${item.color}`}>
+                    <div
+                      className={`col-4 box ${item.color}`}
+                      key={id}
+                    >
                       <img src={item.icon} alt={item.icon} />
                       <p className='text'>{item.title}</p>
                     </div>)
