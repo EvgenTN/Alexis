@@ -1,0 +1,24 @@
+.portfolio{
+  &.sectionNumber{
+    &:before{
+      content:'03';
+    }
+  }  
+  .wrapper{
+    position: relative;
+    max-width: 1170px;
+    padding: 140px 0 0 0;
+  }
+  &__title{
+    margin-bottom: 30px
+  }
+  &__subtext{
+    margin-bottom: 30px
+
+  }
+
+
+  &__image{
+    margin-bottom: 30px;
+  }
+}

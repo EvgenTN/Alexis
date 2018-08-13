@@ -1,8 +1,10 @@
 .header {
+  position: relative;
   min-height: 80px;
   // background: grey;
   display: flex;
   align-items: center;
+  z-index: 2;
 
   .navbar{
     max-width: 1170px;

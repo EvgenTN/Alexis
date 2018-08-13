@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import IMAGES from './images';
-import {logo2x} from '../../assets/images';
+import { logo2x } from '../../assets/images';
+import { NavLink } from 'react-router-dom';
 
 // Testimonials     Blog     Contact
 
@@ -14,11 +15,11 @@ const menu = [
 
   {
     name: 'About Us',
-    href: '/aboutUs',
+    href: '/about',
   },
   {
     name: 'Our Focus',
-    href: '/ourFocus',
+    href: '/focus',
   },
   {
     name: 'Portfolio',
@@ -62,24 +63,24 @@ export default class Header extends Component {
     return (
       <div className='header'>
         <nav className='navbar navbar-expand'>
-          <a className='logo navbar-brand' href='/'>
+          <NavLink className='logo navbar-brand' to='/'>
             <img
               src={logo2x}
               alt='logo'
             />
-          </a>
+          </NavLink>
           {
             menu &&
             <div className='navbar-nav'>
               {menu.map((item, id) => {
                 return (
-                  <a
+                  <NavLink
                     key={id}
-                    href={item.href}
-                    className= {`nav-item nav-link ${item.exact}`}
+                    to={item.href}
+                    className={`nav-item nav-link`}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 )
               })}
             </div>

@@ -6,6 +6,10 @@ import {
   icon_web,
 
 } from '../../assets/images'
+import { Video } from '../'
+
+
+
 
 export default (props) => {
   const box = [
@@ -34,18 +38,19 @@ export default (props) => {
       color: 'yellow',
     },
 
-  ]
+  ];
 
   return (
-    <section className='focus'>
-      <div className='wrapper'>
-        <p className='focus__title'>
-          Our Focus.
+    <React.Fragment>
+      <section className='focus sectionNumber'>
+        <div className='wrapper'>
+          <p className='focus__title title'>
+            Our Focus.
         </p>
-        <p className='focus__subtext'>
-          We understand your requirement and provide quality works.
+          <p className='focus__subtext'>
+            We understand your requirement and provide quality works.
         </p>
-        <div className='focus__boxes'>
+          <div className='focus__boxes'>
             {
               box.map((item, id) => {
                 return (
@@ -62,8 +67,11 @@ export default (props) => {
                 )
               })
             }
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Video />
+    </React.Fragment>
+
   )
 }

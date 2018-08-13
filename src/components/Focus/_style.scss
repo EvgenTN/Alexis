@@ -1,17 +1,10 @@
 .focus {
-  background: $background1;
-  position: relative;
-  &:before {
-    z-index: 0;
-    content: '02';
-    position: absolute;
-    font-size: 274px;
-    font-weight: 700;
-    top:-20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: $backgroundText;
-  }
+    background: $background1;
+  &.sectionNumber{
+    &:before{
+      content: '02';
+    }
+  }  
   .wrapper {
     position: relative;
     max-width: 1140px;
@@ -20,9 +13,6 @@
     text-align: center;
   }
   &__title {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 60px;
-    color: $h1Text;
     margin-bottom: 30px;
   }
   &__subtext {

@@ -14,6 +14,33 @@ img {
 
   padding: 15px;
 }
+
+.sectionNumber{
+  position: relative;
+  &:before{
+    content: '0';
+    position: absolute;
+    top:-20px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 274px;
+    color: $backgroundText;
+    font-weight: 700;
+    z-index: 0;
+  }
+}
+
+.title {
+  font-family: "Libre Baskerville";
+  font-size: 60px;
+  color: $h1Text;
+  text-align: center;
+}
+.subtitle{
+  font-size: 18px;
+  text-align: center;
+}
+
 .button {
   height: 50px;
   padding: 0 40px;
