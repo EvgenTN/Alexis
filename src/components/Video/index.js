@@ -19,7 +19,7 @@ export default () => {
           Explore Our Awesomeness
         </p>
         <button className='video__btn'>
-          <img src={play} />
+          <img src={play} alt='play' />
         </button>
         <p className='video__subtext'>
           Click to play the video

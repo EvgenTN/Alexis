@@ -14,11 +14,20 @@
   }
   &__subtext{
     margin-bottom: 30px
-
   }
 
 
   &__image{
     margin-bottom: 30px;
+    position: relative;
+  }
+  &__onFocusMouse {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
   }
 }

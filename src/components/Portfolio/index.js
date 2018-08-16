@@ -24,6 +24,15 @@ const img = [
 ];
 
 
+function onFocusMouse() {
+  console.log('sdf')
+  return (
+    <div className='portfolio__onFocusMouse'>
+      <p>sdfsdfsdfsdfsdfsdf</p>
+    </div>
+  )
+}
+
 export default () => {
   return (
     <section className='portfolio sectionNumber'>
@@ -37,7 +46,11 @@ export default () => {
             {
               img.map((item, id) => {
                 return (
-                  <div className='col-4 portfolio__image'>
+                  <div
+                    className='col-4 portfolio__image'
+                    key={id}
+                    onMouseOver={ () => onFocusMouse()}
+                  >
                     <img
                       key={id}
                       alt={item}
