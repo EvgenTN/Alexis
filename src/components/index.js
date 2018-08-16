@@ -3,6 +3,8 @@ import About from './About';
 import Focus from './Focus';
 import Video from './Video';
 import Portfolio from './Portfolio';
+import SectionTitle from './SectionTitle';
+
 
 
 export {
@@ -11,4 +13,5 @@ export {
   Focus,
   Video,
   Portfolio,
+  SectionTitle
 } 

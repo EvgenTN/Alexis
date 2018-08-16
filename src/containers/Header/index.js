@@ -55,11 +55,11 @@ export default class Header extends Component {
     }
   }
 
+
   render() {
     const {
       menu,
     } = this.state;
-
     return (
       <div className='header'>
         <nav className='navbar navbar-expand'>
