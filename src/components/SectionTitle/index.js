@@ -2,13 +2,10 @@ import React from 'react';
 
 export default () => {
   return (
-    <div>
-      <p className='sectionNumber'>gsfsdfsdfsdfsdfsdfsf</p>
-      <p>sdfsfsdfsdffdfdfwwwwvvvsdfsdfsdfsdfs</p>
-      <p>sdfsfsdfs5555555dfsdfsdfsdfsdfs</p>
-      <p>55555555555555555555</p>
-      <p>sdfsfsdfscdddcccccccccccccccccdfsdfsdfsdfsdfs</p>
-
+    <div className='sectionTitle'>
+      <p className='sectionNumber'>02</p>
+      <p className='title'>our Focus</p>
+      <p className= 'subtitle'>sdfsfsdfs5555555dfsdfsdfsdfsdfs</p>      
     </div>
   )
 }

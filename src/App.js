@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 // import './App.css';
-import Header from './containers/Header';
+// import Header from './containers/Header';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 import {
   Home,
   About,
-  Focus,
   Portfolio,
 } from './components';
+
+import {
+  Header,
+  Focus,
+} from './containers';
+
 
 class App extends Component {
   render() {

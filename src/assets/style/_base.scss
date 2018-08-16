@@ -14,11 +14,12 @@ img {
 
   padding: 15px;
 }
-
-.sectionNumber{
+.sectionTitle{
+  padding: 1px;
   position: relative;
-  &:before{
-    content: '';
+}
+
+.sectionNumber{  
     position: absolute;
     top:-20px;
     left:50%;
@@ -27,18 +28,23 @@ img {
     color: $backgroundText;
     font-weight: 700;
     z-index: 0;
-  }
 }
 
 .title {
+  padding-top: 130px;
+  margin-bottom: 30px;
+  position: relative;
   font-family: "Libre Baskerville";
   font-size: 60px;
   color: $h1Text;
   text-align: center;
 }
 .subtitle{
+  position: relative;
   font-size: 18px;
   text-align: center;
+  margin-bottom: 50px;
+
 }
 
 .button {

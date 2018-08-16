@@ -1,10 +1,10 @@
 .focus {
     background: $background1;
-  &.sectionNumber{
-    &:before{
-      content: '02';
-    }
-  }  
+  // &.sectionNumber{
+  //   &:before{
+  //     content: '';
+  //   }
+  // }  
   .wrapper {
     position: relative;
     max-width: 1140px;
