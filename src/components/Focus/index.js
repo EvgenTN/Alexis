@@ -6,12 +6,15 @@ import {
   icon_web,
 
 } from '../../assets/images'
-import { Video } from '../'
+import { 
+  Video,
+  SectionTitle
+} from '../';
 
 
 
 
-export default (props) => {
+export default () => {
   const box = [
     {
       icon: icon_web,
@@ -42,14 +45,15 @@ export default (props) => {
 
   return (
     <React.Fragment>
-      <section className='focus sectionNumber'>
+      <section className='focus'>
         <div className='wrapper'>
-          <p className='focus__title title'>
+        <SectionTitle/>
+          {/* <p className='focus__title title'>
             Our Focus.
         </p>
           <p className='focus__subtext'>
             We understand your requirement and provide quality works.
-        </p>
+        </p> */}
           <div className='focus__boxes'>
             {
               box.map((item, id) => {
