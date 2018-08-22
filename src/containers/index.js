@@ -1,5 +1,6 @@
 import Header from './Header';
 import Focus from './Focus';
+import Portfolio from './Portfolio';
 
 
 
@@ -7,4 +8,5 @@ import Focus from './Focus';
 export {
   Header,
   Focus, 
+  Portfolio,
 } 

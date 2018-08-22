@@ -18,27 +18,7 @@ import {
 
 
 class Focus extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     section: '',
-  //   };
-  // }
-
-  // getSection = (arr, path) => {
-  //   const filter = arr.filter(item => {      
-  //     return item.href === path
-  //   });
-  //   return filter[0];
-  // }
-
-
   render() {
-    // console.log(this.props);
-    // console.log(this.props.match.path);
-
-    // console.log(this.state)
-
     const box = [
       {
         icon: icon_web,
@@ -71,9 +51,6 @@ class Focus extends Component {
       match,
       getSection,
     } = this.props;
-
-
-
     return (
       <React.Fragment>
         <section className='focus'>
@@ -83,12 +60,6 @@ class Focus extends Component {
                 getSection(section, match.path)
               }            
             />
-            {/* <p className='focus__title title'>
-            Our Focus.
-        </p>
-          <p className='focus__subtext'>
-            We understand your requirement and provide quality works.
-        </p> */}
             <div className='focus__boxes'>
               {
                 box.map((item, id) => {

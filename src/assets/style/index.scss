@@ -6,13 +6,14 @@
 
 
 
-@import '../../containers/Header/style.scss';
-@import '../../containers/Focus/style.scss';
+@import '../../containers/Header/_style.scss';
+@import '../../containers/Focus/_style.scss';
+@import '../../containers/Portfolio/_style.scss';
 
 
-@import '../../components/Home/style.scss';
-@import '../../components/About/style.scss';
+@import '../../components/Home/_style.scss';
+@import '../../components/About/_style.scss';
 // @import '../../components/Focus/style.scss';
-@import '../../components/Video/style.scss';
-@import '../../components/Portfolio/style.scss';
+@import '../../components/Video/_style.scss';
+// @import '../../components/Portfolio/style.scss';
 
