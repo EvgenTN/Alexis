@@ -18,17 +18,26 @@ import {
 
 
 class Focus extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      section: '',
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     section: '',
+  //   };
+  // }
 
+  // getSection = (arr, path) => {
+  //   const filter = arr.filter(item => {      
+  //     return item.href === path
+  //   });
+  //   return filter[0];
+  // }
 
 
   render() {
-console.log(this.props.section)
+    // console.log(this.props);
+    // console.log(this.props.match.path);
+
+    // console.log(this.state)
 
     const box = [
       {
@@ -57,7 +66,11 @@ console.log(this.props.section)
       },
 
     ];
-
+    const {
+      section,
+      match,
+      getSection,
+    } = this.props;
 
 
 
@@ -65,7 +78,11 @@ console.log(this.props.section)
       <React.Fragment>
         <section className='focus'>
           <div className='wrapper'>
-            <SectionTitle />
+            <SectionTitle 
+              section={
+                getSection(section, match.path)
+              }            
+            />
             {/* <p className='focus__title title'>
             Our Focus.
         </p>
@@ -100,8 +117,10 @@ console.log(this.props.section)
 }
 
 const mapStateToProps = (state) => {
+  // console.log(state);
   return {
-    section: state.section,
+    section: state.data.section,
+    getSection: state.data.getSection,
   }
 }
 

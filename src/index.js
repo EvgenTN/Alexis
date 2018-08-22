@@ -6,15 +6,15 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './Store/configureStore'
 // import initialData from   './initialData'
-const initialData = {
-  section: [{
-    name: 'About Us',
-    href: '/about',
-  }]
-}
+// const initialData = {
+//   section: [{
+//     name: 'About Us',
+//     href: '/about',
+//   }]
+// }
 
 
-const store = configureStore(initialData);
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store = {store}>

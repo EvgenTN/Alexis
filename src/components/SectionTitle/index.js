@@ -1,11 +1,17 @@
 import React from 'react';
 
-export default () => {
+export default (props) => {
+  console.log(props);
+  const {
+    number,
+    subText,
+    title,
+  } = props.section;
   return (
     <div className='sectionTitle'>
-      <p className='sectionNumber'>02</p>
-      <p className='title'>our Focus</p>
-      <p className= 'subtitle'>sdfsfsdfs5555555dfsdfsdfsdfsdfs</p>      
+      <p className='sectionNumber'>{number}</p>
+      <p className='title'>{title}</p>
+        <p className='subtitle'>{subText}</p>      
     </div>
-  )
+      )
 }
