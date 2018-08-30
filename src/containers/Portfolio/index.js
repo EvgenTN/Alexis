@@ -86,7 +86,7 @@ class Portfolio extends Component {
             <div className='row'>
               {
                 img.map((item, id) => {
-                  console.log(`id ${id}, hover ${hoverId}`)
+                  // console.log(`id ${id}, hover ${hoverId}`)
                   return (
                     <div
                       className=' col-md-4 portfolio__image'
@@ -97,12 +97,16 @@ class Portfolio extends Component {
                         alt={item.text}
                         src={item.image}
                         onMouseOver={() => hover(id)}
+
                       />
-                      { 
+                      {
                         hoverId === id &&
-                        <div className='portfolio__onFocusMouse'>
+                        <div
+                          className='portfolio__onFocusMouse'
+                          onMouseOut={() => hover('null')}
+                        >
                           <div className='portfolio__plus'>
-                            <img src={plus} alt="sss"/>
+                            <img src={plus} alt="sss" />
                           </div>
                           <div className='colorLine'></div>
                           <div className='portfolio__footer'>
@@ -124,7 +128,7 @@ class Portfolio extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state', state);
+  // console.log('state', state);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
