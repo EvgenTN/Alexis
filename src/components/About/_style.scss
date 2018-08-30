@@ -37,19 +37,19 @@
       left: 0;
       color: $backgroundText;
     }
-    &:after {
-      content: '';
-      display: block;
-      height: 3px;
-      background: linear-gradient(
-        to right, 
-        $red 25%, 
-        $green 25%,
-        $green 50%,
-        $purpure 50%, 
-        $purpure 75%, 
-        $yellow 75%);
-    }
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   height: 3px;
+    //   background: linear-gradient(
+    //     to right, 
+    //     $red 25%, 
+    //     $green 25%,
+    //     $green 50%,
+    //     $purpure 50%, 
+    //     $purpure 75%, 
+    //     $yellow 75%);
+    // }
     
   }
   &__content {
@@ -71,11 +71,5 @@
     &:last-child{
       margin-bottom: 0;
     }
-  }
-  &__line {
-    content: '';
-    display: block;
-    height: 3px;
-    background: red;
-  }
+  } 
 }

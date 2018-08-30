@@ -25,7 +25,7 @@ export default (props) => {
         android growth hacking ramen buyer.
             </p>
           </div>
-          {/* <div className='about__line'></div> */}
+          <div className='colorLine'></div>
         </div>
 
 

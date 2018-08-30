@@ -21,6 +21,10 @@ import item_7 from './images/item_7.jpg';
 import item_8 from './images/item_8.jpg';
 import item_9 from './images/item_9.jpg';
 
+import plus from './images/plus.svg';
+
+
+
 
 
 
@@ -47,4 +51,5 @@ export {
   item_7,
   item_8,
   item_9,
+  plus,
 }

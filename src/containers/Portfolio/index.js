@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SectionTitle } from '../../components';
+import * as hoverAction from '../../actions/hoverAction';
 
 import {
   item_1,
@@ -12,37 +13,67 @@ import {
   item_7,
   item_8,
   item_9,
+  plus,
 } from '../../assets/images';
 
 const img = [
-  item_1,
-  item_2,
-  item_3,
-  item_4,
-  item_5,
-  item_6,
-  item_7,
-  item_8,
-  item_9,
+  {
+    image: item_1,
+    text: 'Project One'
+  },
+  {
+    image: item_2,
+    text: 'Project Two'
+  },
+  {
+    image: item_3,
+    text: 'Project Three'
+  },
+  {
+    image: item_4,
+    text: 'Project Four'
+  },
+  {
+    image: item_5,
+    text: 'Project Five'
+  },
+  {
+    image: item_6,
+    text: 'Project Six'
+  },
+  {
+    image: item_7,
+    text: 'Project Seven'
+  },
+  {
+    image: item_8,
+    text: 'Project Eight'
+  },
+  {
+    image: item_9,
+    text: 'Project 9'
+  }
+
 ];
 
 
-function onFocusMouse() {
-  console.log('sdf')
-  return (
-    <div className='portfolio__onFocusMouse'>
-      <p>sdfsdfsdfsdfsdfsdf</p>
-    </div>
-  )
-}
+// function onFocusMouse(id) {
+//   console.log(id)
+//   return id
+// }
 
 
 class Portfolio extends Component {
+
+
   render() {
+    // console.log('props', this.props)
     const {
       match,
       section,
       getSection,
+      hover,
+      hoverId
     } = this.props;
 
     return (
@@ -55,17 +86,30 @@ class Portfolio extends Component {
             <div className='row'>
               {
                 img.map((item, id) => {
+                  console.log(`id ${id}, hover ${hoverId}`)
                   return (
                     <div
-                      className='col-4 portfolio__image'
+                      className=' col-md-4 portfolio__image'
                       key={id}
-                      onMouseOver={() => onFocusMouse()}
                     >
                       <img
                         key={id}
-                        alt={item}
-                        src={item}
+                        alt={item.text}
+                        src={item.image}
+                        onMouseOver={() => hover(id)}
                       />
+                      { 
+                        hoverId === id &&
+                        <div className='portfolio__onFocusMouse'>
+                          <div className='portfolio__plus'>
+                            <img src={plus} alt="sss"/>
+                          </div>
+                          <div className='colorLine'></div>
+                          <div className='portfolio__footer'>
+                            <p>{item.text}</p>
+                          </div>
+                        </div>
+                      }
                     </div>
                   )
                 }
@@ -80,10 +124,18 @@ class Portfolio extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log('state', state);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
+    hoverId: state.hover.hoverId
   }
 }
 
-export default connect(mapStateToProps)(Portfolio);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    hover: id => dispatch(hoverAction.hover(id)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);

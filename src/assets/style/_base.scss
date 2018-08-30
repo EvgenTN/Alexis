@@ -64,3 +64,16 @@ img {
 
   }
 }
+
+.colorLine {
+  display: block;
+  height: 3px;
+  background: linear-gradient(
+        to right, 
+        $red 25%, 
+        $green 25%,
+        $green 50%,
+        $purpure 50%, 
+        $purpure 75%, 
+        $yellow 75%);
+}
