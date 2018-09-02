@@ -7,13 +7,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {
   Home,
   About,
-  
+
 } from './components';
 
 import {
   Header,
   Focus,
   Portfolio,
+  Team,
 } from './containers';
 
 
@@ -22,11 +23,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header r='sdfsdfsdf'/>
-          <Route path='/' exact component = {Home}/>
-          <Route path='/about' component = {About}/>
-          <Route path='/focus' component = {Focus}/>
-          <Route path='/portfolio' component = {Portfolio}/>
+          <Header />
+          <Route path='/' exact component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/focus' component={Focus} />
+          <Route path='/portfolio' component={Portfolio} />
+          <Route path='/team' component={Team} />
+
           {/* <Home />
           <About />          
           <Focus />

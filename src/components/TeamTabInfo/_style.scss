@@ -1,0 +1,49 @@
+.teamTabInfo {
+  background: yellow;
+  padding: 70px 70px 70px 100px;
+  &__title{
+    font-size: 20px;
+    color: $h2Text;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  &__container{
+    display: flex;
+    align-items: center;
+    max-height: 300px;
+    min-height: 100%;
+  }
+  &__text{
+    flex:1;
+    font-size: 15px;
+    line-height: 27px;
+  }
+  &__icon{
+    width: 36px;
+    margin: 0 20px;
+
+  }
+  &__link{
+    // background: green;
+    // margin-bottom: 15px;
+    min-height: 100px;
+    height: 100%;
+    border-left: 3px solid red;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a{
+      display: flex;
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      img{
+        width: 16px;
+        margin-right: 15px;
+      }
+    }
+  }
+}

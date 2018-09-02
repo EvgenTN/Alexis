@@ -1,8 +1,10 @@
 import Home from './Home';
 import About from './About';
 import Video from './Video';
-// import Portfolio from './Portfolio';
 import SectionTitle from './SectionTitle';
+import ItemTeam from './ItemTeam';
+import TeamTabInfo from './TeamTabInfo';
+
 
 
 
@@ -10,6 +12,7 @@ export {
   Home,
   About,
   Video,
-  // Portfolio,
-  SectionTitle
+  SectionTitle,
+  ItemTeam,
+  TeamTabInfo,
 } 

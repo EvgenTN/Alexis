@@ -24,6 +24,12 @@ import item_9 from './images/item_9.jpg';
 import plus from './images/plus.svg';
 
 
+import Facebook from './images/Facebook.png';
+import Instagram from './images/Instagram.png';
+import LinkedIn from './images/LinkedIn.png';
+import Twitter from './images/Twitter.png';
+
+import link from './images/link.svg';
 
 
 
@@ -52,4 +58,9 @@ export {
   item_8,
   item_9,
   plus,
+  Facebook,
+  Instagram,
+  LinkedIn,
+  Twitter,
+  link,
 }

@@ -1,7 +1,11 @@
 import section from './section';
 import getSection from './getSection';
+import team from './team';
 
-export default  {
-  section,
-  getSection,  
-}
+export default {
+  data: {
+    section,
+    getSection,
+    team
+  }
+};

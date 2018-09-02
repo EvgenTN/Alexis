@@ -1,0 +1,19 @@
+.team{
+  background: $background1;
+}
+
+.itemTeam {
+
+  &__image{
+    max-width: 263px;
+    height: 270px;
+    background-image: linear-gradient(to top, rgba(252, 95, 69, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &.red {
+    
+    color: $red;
+   
+  }
+
+}

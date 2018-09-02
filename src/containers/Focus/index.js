@@ -19,6 +19,7 @@ import {
 
 class Focus extends Component {
   render() {
+
     const box = [
       {
         icon: icon_web,
@@ -88,7 +89,7 @@ class Focus extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
+  console.log(state);
   return {
     section: state.data.section,
     getSection: state.data.getSection,

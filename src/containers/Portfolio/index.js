@@ -103,10 +103,10 @@ class Portfolio extends Component {
                         hoverId === id &&
                         <div
                           className='portfolio__onFocusMouse'
-                          onMouseOut={() => hover('null')}
+                          onMouseLeave={() => hover('null')}
                         >
                           <div className='portfolio__plus'>
-                            <img src={plus} alt="sss" />
+                            <img src={plus} alt="plus" />
                           </div>
                           <div className='colorLine'></div>
                           <div className='portfolio__footer'>
@@ -135,11 +135,9 @@ const mapStateToProps = (state) => {
     hoverId: state.hover.hoverId
   }
 }
-
 const mapDispatchToProps = (dispatch) => {
   return {
     hover: id => dispatch(hoverAction.hover(id)),
   }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);

@@ -2,64 +2,16 @@ import React, { Component } from 'react';
 // import IMAGES from './images';
 import { logo2x } from '../../assets/images';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-// Testimonials     Blog     Contact
 
-
-const menu = [
-  // {
-  //   name: 'Home',
-  //   href: '/',
-  //   exact: 'exact'
-  // },
-
-  {
-    name: 'About Us',
-    href: '/about',
-  },
-  {
-    name: 'Our Focus',
-    href: '/focus',
-  },
-  {
-    name: 'Portfolio',
-    href: '/portfolio',
-  },
-  {
-    name: 'Work Steps',
-    href: '/workSteps',
-  },
-  {
-    name: 'Pricing',
-    href: '/pricing',
-  },
-  {
-    name: 'Testimonials',
-    href: '/testimonials',
-  },
-  {
-    name: 'Blog',
-    href: '/blog',
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-  }
-];
-
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menu,
-    }
-  }
-
+class Header extends Component {
 
   render() {
+    // console.log(this.props);
     const {
       menu,
-    } = this.state;
+    } = this.props;
     return (
       <div className='header'>
         <nav className='navbar navbar-expand'>
@@ -91,3 +43,12 @@ export default class Header extends Component {
   }
 
 }
+const mapStateToPropps = (state) => {
+  // console.log(state);
+  return {
+    menu: state.data.section,
+  }
+}
+
+
+export default connect(mapStateToPropps)(Header)
