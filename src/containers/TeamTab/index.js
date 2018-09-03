@@ -7,7 +7,7 @@ import * as teamMemberAction from '../../actions/teamMemberAction';
 
 class TeamTab extends React.Component {
   render() {
-    console.log(this.props.activeTeamMember);
+    // console.log(this.props.activeTeamMember);
     const {
       chooseTeamMember,
       team,
@@ -20,6 +20,7 @@ class TeamTab extends React.Component {
             team && team.map((item, id) => {
               return (
                 <ItemTeam
+                  activeTeamMember={activeTeamMember}
                   chooseTeamMember={chooseTeamMember}
                   itemTeam={item}
                   key={id}
@@ -30,7 +31,7 @@ class TeamTab extends React.Component {
           }
         </div>
         {
-          activeTeamMember != undefined &&
+          activeTeamMember !== undefined &&
           <TeamTabInfo
             itemInfo={team[activeTeamMember]}
           />

@@ -1,6 +1,7 @@
 .teamTabInfo {
-  background: yellow;
+  background: $white;
   padding: 70px 70px 70px 100px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   &__title{
     font-size: 20px;
     color: $h2Text;
@@ -23,22 +24,19 @@
   &__icon{
     width: 36px;
     margin: 0 20px;
+    margin-right: 150px;
 
   }
-  &__link{
-    // background: green;
-    // margin-bottom: 15px;
-    // min-height: 100px;
-    // height: 100%;
-    border-left: 3px solid red;
+  &__link{   
+    border-left: 3px solid $inputColor;    
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // position: relative;
-    // top: 0;
-    // bottom: 0;
-    // right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
 
     a{
       display: flex;

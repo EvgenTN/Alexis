@@ -15,7 +15,9 @@ class Header extends Component {
     return (
       <div className='header'>
         <nav className='navbar navbar-expand'>
-          <NavLink className='logo navbar-brand' to='/'>
+          <NavLink
+            className='logo navbar-brand'
+            to='/'>
             <img
               src={logo2x}
               alt='logo'

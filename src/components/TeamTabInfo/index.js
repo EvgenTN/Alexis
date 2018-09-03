@@ -7,7 +7,7 @@ import {
   link,
 } from '../../assets/images';
 export default (props) => {
-  console.log(props);
+  // console.log(props);
   const {
     linkFB,
     linkInstagram,
