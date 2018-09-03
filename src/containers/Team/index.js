@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { SectionTitle } from '../../components';
 import { TeamTab } from '..';
+// import * as dataAction from '../../actions/dataAction';
 
 
 class Team extends React.Component {
@@ -10,8 +11,11 @@ class Team extends React.Component {
     const {
       getSection,
       section,
-      match
+      match,
+      // changeActivePage
     } = this.props;
+    // changeActivePage(match.path);
+
     return (
       <section className='team'>
         <SectionTitle section={getSection(section, match.path)} />
@@ -28,5 +32,11 @@ const mapStateToProps = (state) => {
     team: state.data.team,
   }
 }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
+//   }
+// }
 
 export default connect(mapStateToProps)(Team)

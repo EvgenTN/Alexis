@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { logo2x } from '../../assets/images';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import * as dataAction from '../../actions/dataAction';
 
 
 class Header extends Component {
@@ -11,34 +12,45 @@ class Header extends Component {
     // console.log(this.props);
     const {
       menu,
+      activePage,
+      changeActivePage,
     } = this.props;
+    // console.log('props=>', this.props);
     return (
       <div className='header'>
-        <nav className='navbar navbar-expand'>
+        <nav className='header__navbar wrapper'>
           <NavLink
-            className='logo navbar-brand'
-            to='/'>
-            <img
-              src={logo2x}
-              alt='logo'
-            />
-          </NavLink>
-          {
-            menu &&
-            <div className='navbar-nav'>
-              {menu.map((item, id) => {
-                return (
-                  <NavLink
-                    key={id}
-                    to={item.href}
-                    className={`nav-item nav-link`}
-                  >
-                    {item.name}
-                  </NavLink>
-                )
-              })}
+            to='/'
+            onClick={() => changeActivePage('/')}
+          >
+            <div className='header__logo'>
+              <img
+                src={logo2x}
+                alt='logo'
+              />
             </div>
-          }
+          </NavLink>
+          <div className='header__container'>
+            {
+              menu &&
+              menu.map((item, id) => {
+                const active = item.href === activePage ? ' activePage' : '';
+                return (
+                  <div
+                    className={`header__item${active}`}
+                    key={id}
+                  >
+                    <NavLink
+                      to={item.href}
+                      onClick={() => changeActivePage(item.href)}
+                    >
+                      {item.name}
+                    </NavLink>
+                  </div>
+                )
+              })
+            }
+          </div>
         </nav>
       </div>
     )
@@ -46,11 +58,16 @@ class Header extends Component {
 
 }
 const mapStateToPropps = (state) => {
-  // console.log(state);
+  // console.log('header',state);
   return {
     menu: state.data.section,
+    activePage: state.data.activePage,
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
   }
 }
 
-
-export default connect(mapStateToPropps)(Header)
+export default connect(mapStateToPropps, mapDispatchToProps)(Header)

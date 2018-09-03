@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SectionTitle } from '../../components';
 import * as hoverAction from '../../actions/hoverAction';
+// import * as dataAction from '../../actions/dataAction';
+
 
 import {
   item_1,
@@ -65,17 +67,22 @@ const img = [
 
 class Portfolio extends Component {
 
+  getActivePage = () => {
 
+  }
   render() {
+
     // console.log('props', this.props)
     const {
       match,
       section,
       getSection,
       hover,
-      hoverId
+      hoverId,
+      // activePage,
     } = this.props;
 
+    // activePage(match.path);
     return (
       <section className='portfolio'>
         <div className='wrapper'>
@@ -97,7 +104,6 @@ class Portfolio extends Component {
                         alt={item.text}
                         src={item.image}
                         onMouseOver={() => hover(id)}
-
                       />
                       {
                         hoverId === id &&
@@ -138,6 +144,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     hover: id => dispatch(hoverAction.hover(id)),
+    // activePage: path =>dispatch(dataAction.changeActivePage(path)),
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
+export default connect(mapStateToProps,mapDispatchToProps)(Portfolio);

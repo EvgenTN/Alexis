@@ -23,7 +23,7 @@ export default (props) => {
         onClick={() => chooseTeamMember(id)}
       >
         <div className='itemTeam__image'>
-          <img src={image} alt='Photo' />
+          <img src={image} alt='Face' />
         </div>
         <div className={`itemTeam__footer ${color}`}>
           <p className='itemTeam__name'>{name}</p>

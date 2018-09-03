@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import {
   Home,
-  About,
-
 } from './components';
 
 import {
@@ -15,6 +13,8 @@ import {
   Focus,
   Portfolio,
   Team,
+  About,
+
 } from './containers';
 
 

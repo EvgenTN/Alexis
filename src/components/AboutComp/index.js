@@ -10,8 +10,6 @@ export default (props) => {
             alt='img'
           />
         </div>
-
-
         <div className='about__box'>
           <div className='about__content'>
 
@@ -27,8 +25,6 @@ export default (props) => {
           </div>
           <div className='colorLine'></div>
         </div>
-
-
       </div>
     </div>
   )
