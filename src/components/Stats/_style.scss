@@ -1,0 +1,73 @@
+.stats {
+  background: url(../images/statsBackgroud.jpg) no-repeat center center;
+background-size: cover;
+  &__container{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+
+  }
+  .box{
+    text-align: center;
+    &__image{ 
+      margin: 0 auto;
+      width: 40px;
+      height: 75px;      
+    }
+    &__value{
+      font-size: 20px;
+      font-weight: 500;
+      color: $line;
+      margin-bottom: 25px;
+    }
+    &__title{
+      font-size: 15px;
+      color: $line;
+      margin-bottom: 20px;
+    }
+    .circle {
+      position: relative;
+      margin: 0 auto;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid;
+      border-color: green;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);        
+      }
+      &.red{
+        border-color: $red;
+        &:before{
+        background: $red;
+       }
+      }
+      &.green{
+        border-color: $green;
+        &:before{
+        background: $green;
+       }
+      }
+      &.purpure{
+        border-color: $purpure;
+        &:before{
+        background: $purpure;
+       }
+      }
+      &.yellow{
+        border-color: $yellow;
+        &:before{
+        background: $yellow;
+       }
+      }
+      
+    }    
+  }
+}

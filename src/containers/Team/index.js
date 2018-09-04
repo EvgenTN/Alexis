@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { SectionTitle } from '../../components';
+import { 
+  SectionTitle,
+  Stats,
+} from '../../components';
 import { TeamTab } from '..';
 // import * as dataAction from '../../actions/dataAction';
 
@@ -12,6 +15,7 @@ class Team extends React.Component {
       getSection,
       section,
       match,
+      stats
       // changeActivePage
     } = this.props;
     // changeActivePage(match.path);
@@ -20,6 +24,7 @@ class Team extends React.Component {
       <section className='team'>
         <SectionTitle section={getSection(section, match.path)} />
         <TeamTab />
+        <Stats stats = {stats}/>
       </section>
     )
   }
@@ -30,6 +35,7 @@ const mapStateToProps = (state) => {
     section: state.data.section,
     getSection: state.data.getSection,
     team: state.data.team,
+    stats: state.data.stats,
   }
 }
 

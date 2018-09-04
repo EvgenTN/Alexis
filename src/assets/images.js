@@ -31,13 +31,21 @@ import Twitter from './images/Twitter.png';
 
 import link from './images/link.svg';
 
+import clients from './images/clients.svg'
+import FreebiesReleased from './images/FreebiesReleased.svg'
+import positive_feedback from './images/positive_feedback.svg'
+import propject from './images/propject.svg'
 
-
-
+import statsBackgroud from './images/statsBackgroud.jpg'
 
 
 
 export {
+  statsBackgroud,
+  clients,
+  FreebiesReleased,
+  positive_feedback,
+  propject,
   logo2x,
   money,
   watch,
