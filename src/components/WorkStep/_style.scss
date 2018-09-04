@@ -1,0 +1,73 @@
+.workSteps{
+    .subtitle{
+      margin-bottom: 100px;
+    }
+  .workStep{    
+    position: relative;
+    // background: green;
+    
+    &__image{
+      position: relative;          
+      img {
+        margin: 0 auto;
+        display: block;
+        max-width: 556px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+    .box{      
+      max-width: 480px;
+      position: absolute;
+      z-index: 1;
+      background: $white;
+      top: -50px;
+      border-bottom: 3px solid transparent;
+      padding: 50px 50px 50px 30px;
+      display: flex;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+      &.right{
+        right: 0;
+      }
+      &.left{
+        left: 0;
+      }
+      &.red {
+        border-color: $red;
+      }
+      &.green{
+        border-color: $green;
+    
+      }
+      &.purpure{
+        border-color: $purpure;
+     
+      }
+      &.yellow{
+        border-color: $yellow;     
+      }
+      &__number{
+        width: 80px;
+        height: 80px;
+        color: $backgroundText;
+        font-family: "Libre Baskerville";
+        font-size: 50px;
+        font-weight: 700;
+      }
+      &__info{
+        flex:1;
+      }
+      &__title {
+        margin-bottom: 25px;
+        color: $h2Text;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      &__text{
+        font-size: 15px;
+        line-height: 27px;
+      }
+    }
+  }
+}

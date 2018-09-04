@@ -14,7 +14,7 @@ import {
   Portfolio,
   Team,
   About,
-
+  WorkSteps,
 } from './containers';
 
 
@@ -29,6 +29,7 @@ class App extends Component {
           <Route path='/focus' component={Focus} />
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/team' component={Team} />
+          <Route path='/workSteps' component={WorkSteps} />
 
           {/* <Home />
           <About />          

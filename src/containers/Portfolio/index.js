@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SectionTitle } from '../../components';
 import * as hoverAction from '../../actions/hoverAction';
-// import * as dataAction from '../../actions/dataAction';
+import * as dataAction from '../../actions/dataAction';
 
 
 import {
@@ -79,10 +79,10 @@ class Portfolio extends Component {
       getSection,
       hover,
       hoverId,
-      // activePage,
+      activePage,
     } = this.props;
 
-    // activePage(match.path);
+    activePage(match.path);
     return (
       <section className='portfolio'>
         <div className='wrapper'>
@@ -144,7 +144,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     hover: id => dispatch(hoverAction.hover(id)),
-    // activePage: path =>dispatch(dataAction.changeActivePage(path)),
+    activePage: path =>dispatch(dataAction.changeActivePage(path)),
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Portfolio);

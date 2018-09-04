@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import * as dataAction from '../../actions/dataAction';
+import * as dataAction from '../../actions/dataAction';
 import {
   icon_app,
   icon_photo,
@@ -52,10 +52,10 @@ class Focus extends Component {
       section,
       match,
       getSection,
-      // changeActivePage
+      changeActivePage
     } = this.props;
 
-    // changeActivePage(match.path);
+    changeActivePage(match.path);
     // console.log('focus', this.props)
     return (
       <React.Fragment>
@@ -101,10 +101,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
-//   }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
+  }
+}
 
-export default connect(mapStateToProps)(Focus);
+export default connect(mapStateToProps,mapDispatchToProps)(Focus);

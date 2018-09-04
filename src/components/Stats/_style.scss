@@ -1,6 +1,7 @@
 .stats {
+  margin-top: 20px;
   background: url(../images/statsBackgroud.jpg) no-repeat center center;
-background-size: cover;
+  background-size: cover;
   &__container{
     display: flex;
     justify-content: space-around;

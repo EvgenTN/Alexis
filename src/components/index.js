@@ -5,6 +5,7 @@ import SectionTitle from './SectionTitle';
 import ItemTeam from './ItemTeam';
 import TeamTabInfo from './TeamTabInfo';
 import Stats from './Stats';
+import WorkStep from './WorkStep';
 
 
 
@@ -17,4 +18,5 @@ export {
   ItemTeam,
   TeamTabInfo,
   Stats,
+  WorkStep,
 } 

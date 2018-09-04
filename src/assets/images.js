@@ -39,8 +39,18 @@ import propject from './images/propject.svg'
 import statsBackgroud from './images/statsBackgroud.jpg'
 
 
+import work_1 from './images/work_1.jpg';
+import work_2 from './images/work_2.jpg';
+import work_3 from './images/work_3.jpeg';
+import work_4 from './images/work_4.jpeg';
+
+
 
 export {
+  work_1,
+  work_2,
+  work_3,
+  work_4,
   statsBackgroud,
   clients,
   FreebiesReleased,

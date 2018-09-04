@@ -4,6 +4,7 @@ import Portfolio from './Portfolio';
 import Team from './Team';
 import TeamTab from './TeamTab';
 import About from './About';
+import WorkSteps from './WorkSteps';
 
 
 
@@ -14,4 +15,5 @@ export {
   Portfolio,
   Team,
   TeamTab,
+  WorkSteps,
 } 

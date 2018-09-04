@@ -5,7 +5,7 @@ import {
   Stats,
 } from '../../components';
 import { TeamTab } from '..';
-// import * as dataAction from '../../actions/dataAction';
+import * as dataAction from '../../actions/dataAction';
 
 
 class Team extends React.Component {
@@ -15,10 +15,10 @@ class Team extends React.Component {
       getSection,
       section,
       match,
-      stats
-      // changeActivePage
+      stats,
+      changeActivePage
     } = this.props;
-    // changeActivePage(match.path);
+    changeActivePage(match.path);
 
     return (
       <section className='team'>
@@ -39,10 +39,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
-//   }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
+  }
+}
 
-export default connect(mapStateToProps)(Team)
+export default connect(mapStateToProps,mapDispatchToProps)(Team)

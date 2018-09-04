@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-  console.log(props.stats)
+  // console.log(props.stats)
 
   return (
     <div className='stats'>
@@ -29,8 +29,6 @@ export default (props) => {
           )
         })}
       </div>
-
-
     </div>
 
   )
