@@ -19,14 +19,17 @@ img {
 }
 
 .sectionNumber{  
-    position: absolute;
-    top:-20px;
-    left:50%;
-    transform: translateX(-50%);
-    font-size: 274px;
-    color: $backgroundText;
-    font-weight: 700;
-    z-index: 0;
+  position: absolute;
+  top:-20px;
+  left:50%;
+  transform: translateX(-50%);
+  font-size: 274px;
+  color: $backgroundText;
+  font-weight: 700;
+  z-index: 0;
+  &.dark{
+    color:  $darkSectionNum;
+  }
 }
 
 .title {
@@ -37,13 +40,18 @@ img {
   font-size: 60px;
   color: $h1Text;
   text-align: center;
+  &.dark{
+    color: $white;
+  }
 }
 .subtitle{
   position: relative;
   font-size: 18px;
   text-align: center;
   margin-bottom: 50px;
-
+  &.dark{
+    color: $white;
+  }
 }
 
 .button {

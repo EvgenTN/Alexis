@@ -1,0 +1,74 @@
+.testim{
+  background-color: #3f4049;
+  padding-bottom: 100px;
+  .slider{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__image{  
+      // width: 384px;
+      img {
+        width: 384px;
+        height: 399px;
+        object-fit: cover;
+      }
+    }
+    &__container{
+      border-bottom: 3px solid $red;
+      padding: 40px;
+      background: $white;
+    }
+    &__text{
+      font-size: 15px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+    &__icon{
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    &__name{
+      color:$h2Text;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+    }
+    &__post{
+      color: $red;
+      font-size: 13px;
+    }
+    &__circles{
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__circle {
+      position: relative;
+      margin-right: 8px;
+      width: 18px;
+      height: 18px;
+      background-color: #3f4049; 
+      border-radius: 50%;
+      border: 2px solid $white;
+      &:last-child{
+        margin-right: 0;
+      }
+      &.active {
+        border-color: $red;
+        &:after{
+          content: '';
+          background: $red;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

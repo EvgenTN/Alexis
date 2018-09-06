@@ -17,7 +17,6 @@ export default (props) => {
 
 
   return (
-    <React.Fragment>
       <a
         className={`itemTeam col-3`}
         onClick={() => chooseTeamMember(id)}
@@ -29,13 +28,10 @@ export default (props) => {
           <p className='itemTeam__name'>{name}</p>
           <p className='itemTeam__post'>{post}</p>
         </div>
- {
+      {
         activeTeamMember === id &&
         <div className='itemTeam__threeAngle'></div>
       }
       </a>
-     
-    </React.Fragment>
-
   )
 }

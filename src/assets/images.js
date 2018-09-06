@@ -45,8 +45,23 @@ import work_3 from './images/work_3.jpeg';
 import work_4 from './images/work_4.jpeg';
 
 
+import Melina from'./images/Melina.png';
+import Bread from'./images/Bread.jpeg';
+import carton from'./images/carton.jpeg';
+import melisa from'./images/melisa.jpg';
+import mrBlack from'./images/mrBlack.jpg';
+import obama from'./images/obama.jpeg';
+import girl from'./images/girl.jpeg';
 
 export {
+  Melina,
+  Bread,
+  carton, 
+  melisa, 
+  mrBlack,
+  obama,
+  girl,
+
   work_1,
   work_2,
   work_3,

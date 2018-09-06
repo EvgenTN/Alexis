@@ -15,6 +15,7 @@ import {
   Team,
   About,
   WorkSteps,
+  Testimonials
 } from './containers';
 
 
@@ -30,11 +31,7 @@ class App extends Component {
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/team' component={Team} />
           <Route path='/workSteps' component={WorkSteps} />
-
-          {/* <Home />
-          <About />          
-          <Focus />
-          <Video /> */}
+          <Route path='/testimonials' component={Testimonials} />
         </div>
       </Router>
 

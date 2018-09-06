@@ -7,11 +7,12 @@ export default (props) => {
     subText,
     title,
   } = props.section;
+  const theme = props.theme ? ` ${props.theme}` : '';
   return (
     <div className='sectionTitle'>
-      <p className='sectionNumber'>{number}</p>
-      <p className='title'>{title}</p>
-        <p className='subtitle'>{subText}</p>      
+      <p className={`sectionNumber${theme}`}>{number}</p>
+      <p className={`title${theme}`}>{title}</p>
+      <p className={`subtitle${theme}`}>{subText}</p>
     </div>
-      )
+  )
 }

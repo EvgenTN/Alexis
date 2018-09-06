@@ -5,6 +5,7 @@ import Team from './Team';
 import TeamTab from './TeamTab';
 import About from './About';
 import WorkSteps from './WorkSteps';
+import Testimonials from './Testimonials';
 
 
 
@@ -16,4 +17,5 @@ export {
   Team,
   TeamTab,
   WorkSteps,
+  Testimonials
 } 
