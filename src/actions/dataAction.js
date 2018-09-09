@@ -13,3 +13,10 @@ export const changeActivePage = (path) => {
     payload: path,
   }
 }
+
+export const changeActivSlide = (id) => {
+  return {
+    type: actionTypes.CHANGE_ACTIVE_SLIDE,
+    payload: id,
+  }
+}

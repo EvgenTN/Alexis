@@ -8,14 +8,26 @@ import * as dataAction from '../../actions/dataAction';
 
 
 class Testimonials extends React.Component {
-  state = {
-    activeSlide: 0,
-  };
-  changeSlide = (id) => {
-    this.setState({
-      activeSlide: id,
-    })
+  // state = {
+  //   activeSlide: 0,
+  // // };
+  // changeSlide = (activeSlide) => {
+  //   const nextSlide = (activeSlide === testimonials.length - 1) ? 0 : activeSlide + 1;
+  //   changeActivSlide(nextSlide)
+  // }
+  // componentDidmount(
+  // setTimeout(() => {
+  //   const nextSlide = (activeSlide === testimonials.length - 1) ? 0 : activeSlide + 1;
+  //   console.log(activeSlide);
+  //   this.changeSlide(nextSlide);
+  // }, 3000)
+  // );
+  changeSlide = (activeSlide) => {
+    // const nextSlide = (activeSlide === this.props.testimonials.length - 1) ? 0 : activeSlide;
+    this.props.changeActivSlide(activeSlide)
   }
+
+
   render() {
     // console.log('testimon', this.props);
     const {
@@ -23,18 +35,19 @@ class Testimonials extends React.Component {
       getSection,
       section,
       match,
-      changeActivePage
+      changeActivePage,
+      activeSlide,
+      changeActivSlide
     } = this.props;
-    const {
-      activeSlide
-    } = this.state;
-    changeActivePage(match.path)
 
-    setTimeout(() => {
-      const nextSlide = (activeSlide === testimonials.length - 1) ? 0 : activeSlide + 1;
-      console.log(activeSlide);
-      this.changeSlide(nextSlide);
-    }, 3000);
+    // const {
+
+    // } = this.state;
+    changeActivePage(match.path)
+    // componentDidMount(
+
+    // )
+
     // var a = 0;
     // setInterval(() => {
     //   console.log(a++);
@@ -49,7 +62,7 @@ class Testimonials extends React.Component {
           />
           <SelectSlider
             item={testimonials[activeSlide]}
-            changeSlide={this.changeSlide}
+            changeSlide={changeActivSlide}
             testimonials={testimonials}
             activeSlide={activeSlide}
           />
@@ -64,13 +77,15 @@ const mapStateToProps = (state) => {
   return {
     section: state.data.section,
     getSection: state.data.getSection,
-    testimonials: state.data.testimonials
+    testimonials: state.data.testimonials,
+    activeSlide: state.data.activeSlide,
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
+    changeActivSlide: id => dispatch(dataAction.changeActivSlide(id)),
   }
 }
 
