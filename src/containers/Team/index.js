@@ -19,7 +19,6 @@ class Team extends React.Component {
       changeActivePage
     } = this.props;
     changeActivePage(match.path);
-
     return (
       <section className='team'>
         <SectionTitle section={getSection(section, match.path)} />

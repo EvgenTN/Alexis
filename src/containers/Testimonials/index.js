@@ -15,21 +15,38 @@ class Testimonials extends React.Component {
   //   const nextSlide = (activeSlide === testimonials.length - 1) ? 0 : activeSlide + 1;
   //   changeActivSlide(nextSlide)
   // }
-  // componentDidmount(
+  // componentDidMount(
   // setTimeout(() => {
   //   const nextSlide = (activeSlide === testimonials.length - 1) ? 0 : activeSlide + 1;
   //   console.log(activeSlide);
   //   this.changeSlide(nextSlide);
   // }, 3000)
   // );
-  changeSlide = (activeSlide) => {
-    // const nextSlide = (activeSlide === this.props.testimonials.length - 1) ? 0 : activeSlide;
-    this.props.changeActivSlide(activeSlide)
+
+
+
+
+  // changeSlide = (activeSlide) => {
+  // const nextSlide = (activeSlide === this.props.testimonials.length - 1) ? 0 : activeSlide;
+  //   this.props.changeActivSlide(activeSlide)
+  // }
+
+  showNextSlide = (activeSlide) => {
+    console.log('sdfsdfsdfsdfs')
+    const nextSlide = (activeSlide === this.props.testimonials.length - 1) ? 0 : activeSlide + 1;
+    this.props.changeActivSlide(nextSlide);
   }
+
+  timer = setInterval(() => {
+    this.showNextSlide();
+  }, 2000);
+
+  showSlideshow = () => {
+    this.timer;
+  };
 
 
   render() {
-    // console.log('testimon', this.props);
     const {
       testimonials,
       getSection,
@@ -40,18 +57,11 @@ class Testimonials extends React.Component {
       changeActivSlide
     } = this.props;
 
-    // const {
+    changeActivePage(match.path);
 
-    // } = this.state;
-    changeActivePage(match.path)
-    // componentDidMount(
+    clearInterval(this.timer);
 
-    // )
-
-    // var a = 0;
-    // setInterval(() => {
-    //   console.log(a++);
-    // }, 3000)
+    this.showSlideshow();
 
     return (
       <section className='testim'>
