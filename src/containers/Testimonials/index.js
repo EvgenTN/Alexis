@@ -41,9 +41,9 @@ class Testimonials extends React.Component {
     this.showNextSlide();
   }, 2000);
 
-  showSlideshow = () => {
-    this.timer;
-  };
+  // showSlideshow = () => {
+  //   this.timer;
+  // };
 
 
   render() {
@@ -61,7 +61,7 @@ class Testimonials extends React.Component {
 
     clearInterval(this.timer);
 
-    this.showSlideshow();
+    // this.showSlideshow();
 
     return (
       <section className='testim'>

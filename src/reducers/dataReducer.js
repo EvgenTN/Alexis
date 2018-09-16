@@ -3,8 +3,14 @@ import * as actionTypes from '../actions/actionTypes';
 
 
 export default (state = [], action) => {
-  // console.log(state);
+  // console.log('state=> ',state);
+  // console.log('action=> ', action);
+
   switch (action.type) {
+    case actionTypes.ADD_DATA:
+    // const result = {...state};
+      return Object.assign({...state}, action.payload);
+
     case actionTypes.CHANGE_ACTIVE_SLIDE:
       return {
         ...state,

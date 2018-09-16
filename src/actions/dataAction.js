@@ -7,6 +7,14 @@ export const changeData = (data) => {
   }
 }
 
+export const addData = (data) => {
+  // console.log(data);
+  return {
+    type: actionTypes.ADD_DATA,
+    payload: data,
+  }
+}
+
 export const changeActivePage = (path) => {
   return {
     type: actionTypes.CHANGE_ACTIVE_PAGE,
