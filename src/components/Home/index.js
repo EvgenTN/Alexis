@@ -30,7 +30,7 @@ export default (props) => {
     <div className='home'>
       <div className='wrapper darkBack'>
         <div className='title'>We design things with love and passion.</div>
-        <button className='button orange'>
+        <button className='button red'>
           Our Works
         </button>
 

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   color: $defaultTextColor;
 }
 img {
@@ -62,14 +62,18 @@ img {
   text-transform: uppercase;
   font-weight: 400;
   color: $white;
-  border:none;
-  &.orange{
+  border:3px solid transparent;
+  outline: none;
+  &.red{
     background-color: $orange;
   }
   &.green{
     background-color: $green;
-
   }
+  &.purpure{
+    background-color: $purpure;
+  }
+
 }
 
 .colorLine {

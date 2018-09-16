@@ -1,0 +1,109 @@
+.pricing {
+  background: $background1;
+  padding-bottom: 20px;
+  .box{
+    position: relative;
+    
+    &__wrapper {
+      padding: 30px 10px;
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      // padding: 20px;
+      &.green{      
+        border-top: 3px solid $green;
+        & .box__price{
+          background: $green;
+          &:after {
+            border-color: $green;
+          }
+        }
+      }
+      &.red{
+        border-top: 3px solid $red;
+        & .box__price{
+          background: $red;
+          &:after {
+            border-color: $red;
+          }
+        }       
+      }
+      &.purpure{
+        border-top: 3px solid $purpure;
+        & .box__price{
+          background: $purpure;
+          &:after {
+            border-color: $purpure;
+          }
+        }       
+      }
+    }
+    &__title{
+      margin-bottom: 20px;
+      color:$h1Text;
+      font-size: 15px;
+      font-weight: 500;      
+    }
+    &__price{
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      // background: green;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      p {
+      color:$white;
+      font-size: 20px;
+        &:last-child{
+          font-size: 13px;      
+      }
+     }
+      &:after{
+        content: '';
+        position: absolute;
+        width: calc(100% + 9px);
+        height: calc(100% + 9px);
+        // margin: 10px;
+        background: transparent;
+        border: 3px solid;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+    &__info{
+      text-align: center;
+      // background: red;
+      font-size: 15px;
+      margin-bottom: 60px;
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    &__boldText{
+      font-weight: 600;
+    }
+    .button {
+      position: absolute;
+      bottom: 30px;
+      &.green{
+        background: transparent;
+        color: $green;
+        border: 3px solid;
+      }
+
+      &.purpure{
+        background: transparent;
+        color: $purpure;
+        border: 3px solid;
+    }
+  }
+}
+}
