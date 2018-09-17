@@ -1,0 +1,17 @@
+.whySelectUs{
+  .box{
+    margin-bottom: 70px;
+    &__title{
+      color: $h2Text;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      line-height: 26px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+}

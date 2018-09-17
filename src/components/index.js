@@ -8,12 +8,14 @@ import Stats from './Stats';
 import WorkStep from './WorkStep';
 import SelectSlider from './SelectSlider';
 import PricingBox from './PricingBox';
+import ItemWhySelectUs from "./ItemWhySelectUs";
 
 
 
 
 
 export {
+  ItemWhySelectUs,
   PricingBox,
   SelectSlider,
   Home,

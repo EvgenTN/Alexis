@@ -53,7 +53,21 @@ import mrBlack from'./images/mrBlack.jpg';
 import obama from'./images/obama.jpeg';
 import girl from'./images/girl.jpeg';
 
+import awardWinningCompany from './images/awardWinningCompany.svg';
+import businessGrowth from './images/businessGrowth.svg';
+import smartExperience from './images/smartExperience.svg';
+import strictDeadline from './images/strictDeadline.svg';
+import ultimatePerfection from './images/ultimatePerfection.svg';
+import unlimitedRevisions from './images/unlimitedRevisions.svg';
+
 export {
+  awardWinningCompany,
+  businessGrowth,
+  smartExperience,
+  strictDeadline,
+  ultimatePerfection,
+  unlimitedRevisions,
+
   Melina,
   Bread,
   carton, 

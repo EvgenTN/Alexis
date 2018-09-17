@@ -7,11 +7,14 @@ import About from './About';
 import WorkSteps from './WorkSteps';
 import Testimonials from './Testimonials';
 import Pricing from './Pricing';
+import WhySelectUs from './WhySelectUs';
+
 
 
 
 
 export {
+  WhySelectUs,
   Pricing,
   Header,
   About,
