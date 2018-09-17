@@ -10,18 +10,18 @@ export default (props) => {
   const box = [
     {
       icon: money,
-      title: 'Fixed price projects',
+      title: 'Fixed price projects lalala',
       color: 'green'
     },
     {
       icon: watch,
-      title: 'Receive on time',
+      title: 'Receive on time lalala',
       color: 'purpure',
 
     },
     {
       icon: check,
-      title: 'Satisfaction guranteed',
+      title: 'Satisfaction guranteed lalala',
       color: 'yellow',
 
     },
