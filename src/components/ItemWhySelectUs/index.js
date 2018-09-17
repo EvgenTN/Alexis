@@ -10,7 +10,7 @@ export default (props) => {
   } = props;
 
   return (
-    <div className="boxes container-fluid">
+    <div className="boxes">
       <div className="row">
         {
           whySelectUs && whySelectUs.map((item, id) => {
@@ -18,13 +18,16 @@ export default (props) => {
             return (
               <div
                 key={id}
-                className="box col-4 row"
+                className="box col-4"
               >
-                <div className="box__icon col-4">
-                  <img src="" alt="icon" />
+                <div className="row">
+                  <div className="box__icon col-2">
+                    <img src="" alt="icon" />
+                  </div>
+                  <p className="box__title col-7">{item.title}</p>
                 </div>
-                <p className="box__title col-7">{item.title}</p>
-                <p className="box__text col-12">{item.text}</p>
+
+                <p className="box__text">{item.text}</p>
               </div >
             )
           })
