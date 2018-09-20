@@ -9,6 +9,7 @@ import WorkStep from './WorkStep';
 import SelectSlider from './SelectSlider';
 import PricingBox from './PricingBox';
 import ItemWhySelectUs from "./ItemWhySelectUs";
+import ItemArticle from './ItemArticle';
 
 
 
@@ -26,4 +27,5 @@ export {
   TeamTabInfo,
   Stats,
   WorkStep,
+  ItemArticle,
 } 
