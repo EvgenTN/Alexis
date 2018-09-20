@@ -10,6 +10,7 @@ import SelectSlider from './SelectSlider';
 import PricingBox from './PricingBox';
 import ItemWhySelectUs from "./ItemWhySelectUs";
 import ItemArticle from './ItemArticle';
+import ActiveArticle from './ActiveArticle';
 
 
 
@@ -28,4 +29,5 @@ export {
   Stats,
   WorkStep,
   ItemArticle,
+  ActiveArticle,
 } 
