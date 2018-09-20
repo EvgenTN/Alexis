@@ -11,6 +11,7 @@ export default (props) => {
         return (
           <div className='itemArticle__article'
             key={id}
+            onClick = {() => props.changeActiveArticle(id)}
           >
             <div className={item.color}>{item.author}</div>
             <div>{item.date}</div>

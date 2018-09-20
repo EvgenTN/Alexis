@@ -20,8 +20,8 @@ class Blog extends Component {
       ))
   }
 
-  filterArticle = (articles,activeArticle) => {
-    return articles && articles.filter((item, id) => {return activeArticle !== id})
+  filterArticle = (articles, activeArticle) => {
+    return articles && articles.filter((item, id) => { return activeArticle !== id })
   }
 
   render() {
@@ -31,7 +31,8 @@ class Blog extends Component {
       getSection,
       changeActivePage,
       blog,
-      activeArticle
+      activeArticle,
+      changeActiveArticle,
     } = this.props;
     changeActivePage(match.path);
     // console.log(this.props)
@@ -41,11 +42,14 @@ class Blog extends Component {
           <SectionTitle section={getSection(section, match.path)} />
           <div className='articles'>
             <ItemArticle
-              blog={this.filterArticle(blog,activeArticle)}
+              blog={this.filterArticle(blog, activeArticle)}
+              changeActiveArticle={changeActiveArticle}
             />
-            <ActiveArticle 
-              activeArticle={blog[activeArticle]}
-            />
+            {blog &&
+              <ActiveArticle
+                activeArticle={blog[activeArticle]}
+              />
+            }
           </div>
         </div>
       </section>
@@ -67,6 +71,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
     addData: data => dispatch(dataAction.addData(data)),
+    changeActiveArticle: id => dispatch(dataAction.changeActiveArticle(id)),
   }
 }
 
