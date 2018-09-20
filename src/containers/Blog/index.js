@@ -19,17 +19,19 @@ class Blog extends Component {
       ))
   }
 
-  filterArticle = (articles) => {
-    articles && articles.filter((item, id) => {return item.activeArticle != undefined})
+  filterArticle = (articles,activeArticle) => {
+    return articles && articles.filter((item, id) => {return activeArticle != id})
   }
 
   render() {
     const {
+
       section,
       match,
       getSection,
       changeActivePage,
-      blog
+      blog,
+      activeArticle
     } = this.props;
     changeActivePage(match.path);
     // console.log(this.props)
@@ -39,7 +41,7 @@ class Blog extends Component {
           <SectionTitle section={getSection(section, match.path)} />
           <div className='articles'>
             <ItemArticle
-              blog={blog}
+              blog={this.filterArticle(blog,activeArticle)}
             />
           </div>
         </div>
@@ -54,6 +56,7 @@ const mapStateToProps = (state) => {
     section: state.data.section,
     getSection: state.data.getSection,
     blog: state.data.blog,
+    activeArticle: state.data.activeArticle,
   }
 }
 
