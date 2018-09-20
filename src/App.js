@@ -17,7 +17,8 @@ import {
   WorkSteps,
   Testimonials,
   Pricing,
-  WhySelectUs
+  WhySelectUs,
+  Blog
 } from './containers';
 
 
@@ -29,51 +30,6 @@ class App extends Component {
 
 
   render() {
-
-    // const pricing = [
-    //   {
-    //     "title": "Starter",
-    //     "price": "125",
-    //     "info": {
-    //       "Online Storage": "200GB",
-    //       "Files Per Day": "20",
-    //       "Monthly Bandwidth": "2TB",
-    //       "Secure Platform": ">",
-    //       "24/7 Customer Support": ">",
-    //       "Fast & Reliable": ">",
-    //     },
-    //     "color": "green",
-    //   },
-    //   {
-    //     "title": "Ultimate",
-    //     "price": "195",
-    //     "info": {
-    //       "Online Storage": "800GB",
-    //       "Files Per Day": "Unlimited",
-    //       "Monthly Bandwidth": "10TB",
-    //       "Secure Platform": ">",
-    //       "24/7 Customer Support": ">",
-    //       "Fast & Reliable": ">",
-    //     },
-    //     "color": "red",
-    //   },
-    //   {
-    //     "title": "Professional",
-    //     "price": "145",
-    //     "info": {
-    //       "Online Storage": "200GB",
-    //       "Files Per Day": 20,
-    //       "Monthly Bandwidth": "2TB",
-    //       "Secure Platform": ">",
-    //       "24/7 Customer Support": ">",
-    //       "Fast & Reliable": ">",
-    //     },
-    //     "color": "purpure",
-    //   },
-    // ];
-
-    // var str = JSON.stringify(pricing);
-    // console.log(str);
 
 
     return (
@@ -89,6 +45,7 @@ class App extends Component {
           <Route path='/testimonials' component={Testimonials} />
           <Route path='/pricing' component={Pricing} />
           <Route path="/whySelectUs" component={WhySelectUs} />
+          <Route path="/blog" component={Blog}/>
         </div>
       </Router>
 

@@ -9,6 +9,7 @@ export default (state = [], action) => {
   switch (action.type) {
     case actionTypes.ADD_DATA:
     // const result = {...state};
+      // console.log(action.payload);
       return Object.assign({...state}, action.payload);
 
     case actionTypes.CHANGE_ACTIVE_SLIDE:

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default (props) => {
-  console.log(props);
+  // console.log(props);
 
   const {
 
@@ -14,7 +14,7 @@ export default (props) => {
       <div className="row">
         {
           whySelectUs && whySelectUs.map((item, id) => {
-            console.log(item.icon);
+            // console.log(item.icon);
             return (
               <div
                 key={id}

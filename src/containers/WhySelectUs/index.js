@@ -31,7 +31,7 @@ class WhySelectUs extends React.Component {
       whySelectUs,
     } = this.props;
 
-    console.log(this.props)
+    // console.log(this.props)
     changeActivePage(match.path);
     return (
       <section className="whySelectUs">
