@@ -8,6 +8,7 @@ import WorkSteps from './WorkSteps';
 import Testimonials from './Testimonials';
 import Pricing from './Pricing';
 import WhySelectUs from './WhySelectUs';
+import Blog from './Blog';
 
 
 
@@ -23,5 +24,6 @@ export {
   Team,
   TeamTab,
   WorkSteps,
-  Testimonials
+  Testimonials,
+  Blog,
 } 
