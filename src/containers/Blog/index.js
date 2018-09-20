@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as dataAction from "../../actions/dataAction";
 import {
   SectionTitle,
+  ItemArticle,
 } from '../../components';
 import data from "../../data/blog";
 
@@ -18,6 +19,9 @@ class Blog extends Component {
       ))
   }
 
+  filterArticle = (articles) => {
+    articles && articles.filter((item, id) => {return !item.activeArticle})
+  }
 
   render() {
     const {
@@ -33,7 +37,11 @@ class Blog extends Component {
       <section className="blog">
         <div className="wrapper">
           <SectionTitle section={getSection(section, match.path)} />
-          
+          <div className='articles'>
+            <ItemArticle
+              blog={this.filterArticle(blog)}
+            />
+          </div>
         </div>
       </section>
     )
