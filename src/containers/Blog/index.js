@@ -20,7 +20,7 @@ class Blog extends Component {
   }
 
   filterArticle = (articles) => {
-    articles && articles.filter((item, id) => {return !item.activeArticle})
+    articles && articles.filter((item, id) => {return item.activeArticle != undefined})
   }
 
   render() {
@@ -39,7 +39,7 @@ class Blog extends Component {
           <SectionTitle section={getSection(section, match.path)} />
           <div className='articles'>
             <ItemArticle
-              blog={this.filterArticle(blog)}
+              blog={blog}
             />
           </div>
         </div>
