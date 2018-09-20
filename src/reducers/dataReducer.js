@@ -31,7 +31,7 @@ export default (state = [], action) => {
       return [...state];
     default:
       // console.log(state);
-      const random4 = Math.floor(Math.random() * 3);
+      const random4 = Math.floor(Math.random() * 4);
       return {
         ...state,
         activeSlide: 0,
