@@ -7,10 +7,15 @@ export default (state = [], action) => {
   // console.log('action=> ', action);
 
   switch (action.type) {
+    case actionTypes.CHANGE_ACTIVE_ARTICLE:
+      return {
+        ...state,
+        activeArticle: action.payload,
+      }
     case actionTypes.ADD_DATA:
-    // const result = {...state};
+      // const result = {...state};
       // console.log(action.payload);
-      return Object.assign({...state}, action.payload);
+      return Object.assign({ ...state }, action.payload);
 
     case actionTypes.CHANGE_ACTIVE_SLIDE:
       return {
@@ -26,9 +31,11 @@ export default (state = [], action) => {
       return [...state];
     default:
       // console.log(state);
+      const random4 = Math.floor(Math.random() * 3);
       return {
         ...state,
         activeSlide: 0,
+        activeArticle: random4,
       };
   }
 }

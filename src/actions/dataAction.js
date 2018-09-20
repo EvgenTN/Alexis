@@ -1,5 +1,12 @@
 import * as actionTypes from './actionTypes';
 
+export const changeActivArticle = (id) => {
+  return {
+    type: actionTypes.CHANGE_ACTIVE_ARTICLE,
+    payload: id,
+  }
+}
+
 export const changeData = (data) => {
   return {
     type: actionTypes.CHANGE_DATA,
