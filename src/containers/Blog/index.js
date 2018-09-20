@@ -4,6 +4,7 @@ import * as dataAction from "../../actions/dataAction";
 import {
   SectionTitle,
   ItemArticle,
+  ActiveArticle,
 } from '../../components';
 import data from "../../data/blog";
 
@@ -20,12 +21,11 @@ class Blog extends Component {
   }
 
   filterArticle = (articles,activeArticle) => {
-    return articles && articles.filter((item, id) => {return activeArticle != id})
+    return articles && articles.filter((item, id) => {return activeArticle !== id})
   }
 
   render() {
     const {
-
       section,
       match,
       getSection,
@@ -42,6 +42,9 @@ class Blog extends Component {
           <div className='articles'>
             <ItemArticle
               blog={this.filterArticle(blog,activeArticle)}
+            />
+            <ActiveArticle 
+              activeArticle={blog[activeArticle]}
             />
           </div>
         </div>
