@@ -41,7 +41,7 @@ class WhySelectUs extends React.Component {
           />
           <ItemWhySelectUs
             whySelectUs={whySelectUs}
-            // images = {images}
+            img= {images}
           />
         </div>
       </section>

@@ -1,0 +1,83 @@
+.activeArcticle{
+  // background: green;
+  border-bottom: 3px solid transparent;
+  max-width: 555px;
+  margin-bottom: 30px;
+  &.green {
+    border-color: $green;    
+  }
+  &.red {
+    border-color: $red;    
+  }
+  &.purpure {
+    border-color: $purpure;    
+  }
+  &.yellow {
+    border-color: $yellow;    
+  }
+  &__image{
+    height: 443px;
+    position: relative;
+    background: grey;
+    // margin-bottom: 30px;
+  }
+  &__authorBox{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex; 
+  }
+  &__author{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 20px;
+    &.green{
+      color: $green;
+    }
+    &.red{
+      color: $red;
+    }
+    &.purpure{
+      color: $purpure;
+    }
+    &.yellow{
+      color: $yellow;
+    }
+  }
+  &__date{
+    font-size: 13px;
+    color: $white;
+  }
+  &__article{
+    padding: 30px;
+    background: $white;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+    margin-bottom: 30px;
+    color: $h2Text;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 27px;    
+  }
+  &__more{
+    font-size: 15px;
+    font-weight: 500;
+    &.green{
+      color: $green;
+    }
+    &.red{
+      color: $red;
+    }
+    &.purpure{
+      color: $purpure;
+    }
+    &.yellow{
+      color: $yellow;
+    }
+  }
+}

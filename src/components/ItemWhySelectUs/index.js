@@ -1,14 +1,15 @@
 import React from "react";
+// import * as img from "../../assets/images";
+
 
 export default (props) => {
   // console.log(props);
 
   const {
-
     whySelectUs,
-    images,
+    img,
   } = props;
-
+console.log (props);
   return (
     <div className="boxes">
       <div className="row">
@@ -21,8 +22,8 @@ export default (props) => {
                 className="box col-4"
               >
                 <div className="row">
-                  <div className="box__icon col-2">
-                    <img src="" alt="icon" />
+                  <div className="box__icon col-4">
+                    <img src={img.icon_app} alt="icon" />
                   </div>
                   <p className="box__title col-7">{item.title}</p>
                 </div>

@@ -59,7 +59,7 @@ class Focus extends Component {
     // console.log('focus', this.props)
     return (
       <React.Fragment>
-        <section className='focus'>
+        <section className='focus background1'>
           <div className='wrapper'>
             <SectionTitle
               section={
