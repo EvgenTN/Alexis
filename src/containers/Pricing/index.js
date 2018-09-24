@@ -28,7 +28,7 @@ class Pricing extends React.Component {
 
     changeActivePage(match.path);
     return (
-      <section className="pricing">
+      <section className="pricing background1">
         <div className="wrapper">
           <SectionTitle
             section={getSection(section, match.path)}

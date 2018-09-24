@@ -20,7 +20,7 @@ class Team extends React.Component {
     } = this.props;
     changeActivePage(match.path);
     return (
-      <section className='team'>
+      <section className='team background1'>
         <SectionTitle section={getSection(section, match.path)} />
         <TeamTab />
         <Stats stats = {stats}/>

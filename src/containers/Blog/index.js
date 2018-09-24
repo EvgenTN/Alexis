@@ -37,20 +37,27 @@ class Blog extends Component {
     changeActivePage(match.path);
     // console.log(this.props)
     return (
-      <section className="blog">
+      <section className="blog background1">
         <div className="wrapper">
           <SectionTitle section={getSection(section, match.path)} />
-          <div className='articles'>
-            <ItemArticle
-              blog={this.filterArticle(blog, activeArticle)}
-              changeActiveArticle={changeActiveArticle}
-            />
-            {blog &&
-              <ActiveArticle
-                activeArticle={blog[activeArticle]}
-              />
-            }
-          </div>
+          {
+            blog &&
+            <div className="row" >
+              <div className="col-6" >
+                <ActiveArticle
+                  className="col-6"
+                  activeArticle={blog[activeArticle]}
+                />
+              </div>
+              <div className='col-6'>
+                <ItemArticle
+                  blog={blog}
+                  changeActiveArticle={changeActiveArticle}
+                  activeArticle={activeArticle}
+                />
+              </div>
+            </div>
+          }
         </div>
       </section>
     )
@@ -58,7 +65,7 @@ class Blog extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
