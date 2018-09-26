@@ -12,6 +12,7 @@ import ItemWhySelectUs from "./ItemWhySelectUs";
 import ItemArticle from './ItemArticle';
 import ActiveArticle from './ActiveArticle';
 import Subscribe from './Subscribe';
+import ContactForm from './ContactForm';
 
 
 
@@ -32,4 +33,5 @@ export {
   WorkStep,
   ItemArticle,
   ActiveArticle,
+  ContactForm,
 } 

@@ -31,7 +31,7 @@ class Blog extends Component {
 
   changeMail = (e) => {
     e.preventDefault();
-    this.setState ({
+    this.setState({
       email: e.target.value,
     })
   }
@@ -40,7 +40,7 @@ class Blog extends Component {
     e.preventDefault();
     // console.log('event', e.target.value);
     this.props.addSubscribeMail(email)
-    this.setState ({
+    this.setState({
       email: '',
     })
   }
@@ -96,7 +96,7 @@ class Blog extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state.data',state.data);
+  console.log('state.data', state.data);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
