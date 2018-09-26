@@ -18,7 +18,8 @@ import {
   Testimonials,
   Pricing,
   WhySelectUs,
-  Blog
+  Blog,
+  Contact
 } from './containers';
 
 
@@ -46,6 +47,7 @@ class App extends Component {
           <Route path='/pricing' component={Pricing} />
           <Route path="/whySelectUs" component={WhySelectUs} />
           <Route path="/blog" component={Blog}/>
+          <Route path="/contact" component={Contact}/>
         </div>
       </Router>
 
