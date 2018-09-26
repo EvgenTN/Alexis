@@ -2,16 +2,22 @@ import React from 'react';
 
 
 export default (props) => {
+  const {
+    addMessage,
+  } = props;
   return (
     <div className='contactForm'>
-    <form className='contactForm__form'>
-      <input className='contactForm__input' type='text' placeholder='Your Name' />
-      <input className='contactForm__input' type='email' placeholder='Your Email' />
-      <input className='contactForm__input' type='text' placeholder='Subject' />
-      <input className='contactForm__input' type='text' placeholder='Project Budget' />
-      <input className='contactForm__textarea' type='textarea' placeholder='Your Message' />
-      <button className='button red' type='submit'>send message</button>
-    </form>
+      <form
+        className='contactForm__form'
+      // onSubm
+      >
+        <input className='contactForm__input' type='text' name='name' placeholder='Your Name' onChange={(e) => props.addMessage(e)} />
+        <input className='contactForm__input' type='email' name='email' placeholder='Your Email' onChange={(e) => props.addMessage(e)} />
+        <input className='contactForm__input' type='text' name='subject' placeholder='Subject' onChange={(e) => props.addMessage(e)} />
+        <input className='contactForm__input' type='text' name='budget' placeholder='Project Budget' onChange={(e) => props.addMessage(e)} />
+        <input className='contactForm__textarea' type='textarea' name='message' placeholder='Your Message' onChange={(e) => props.addMessage(e)} />
+        <button className='button red' type='submit'>send message</button>
+      </form>
     </div>
   )
 }
