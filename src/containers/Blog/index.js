@@ -5,6 +5,7 @@ import {
   SectionTitle,
   ItemArticle,
   ActiveArticle,
+  Subscribe,
 } from '../../components';
 import data from "../../data/blog";
 
@@ -42,29 +43,33 @@ class Blog extends Component {
     changeActivePage(match.path);
     // console.log(this.props)
     return (
-      <section className="blog background1">
-        <div className="wrapper">
-          <SectionTitle section={getSection(section, match.path)} />
-          {
-            blog &&
-            <div className="row" >
-              <div className="col-6" >
-                <ActiveArticle
-                  className="col-6"
-                  activeArticle={blog[activeArticle]}
-                />
+      <React.Fragment>
+        <section className="blog background1">
+          <div className="wrapper">
+            <SectionTitle section={getSection(section, match.path)} />
+            {
+              blog &&
+              <div className="row" >
+                <div className="col-6" >
+                  <ActiveArticle
+                    className="col-6"
+                    activeArticle={blog[activeArticle]}
+                  />
+                </div>
+                <div className='col-6'>
+                  <ItemArticle
+                    blog={blog}
+                    changeActiveArticle={changeActiveArticle}
+                    activeArticle={activeArticle}
+                  />
+                </div>
               </div>
-              <div className='col-6'>
-                <ItemArticle
-                  blog={blog}
-                  changeActiveArticle={changeActiveArticle}
-                  activeArticle={activeArticle}
-                />
-              </div>
-            </div>
-          }
-        </div>
-      </section>
+            }
+          </div>
+        </section>
+        <Subscribe />
+      </React.Fragment>
+
     )
   }
 }

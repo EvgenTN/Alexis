@@ -11,12 +11,14 @@ import PricingBox from './PricingBox';
 import ItemWhySelectUs from "./ItemWhySelectUs";
 import ItemArticle from './ItemArticle';
 import ActiveArticle from './ActiveArticle';
+import Subscribe from './Subscribe';
 
 
 
 
 
 export {
+  Subscribe,
   ItemWhySelectUs,
   PricingBox,
   SelectSlider,
