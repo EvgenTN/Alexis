@@ -26,7 +26,10 @@ class Blog extends Component {
   };
 
   addSubscribe = (e) => {
+    e.preventDefault();
+    console.log('event', e.target.value);
     const mail = e.target.value;
+    console.log('mail', mail);
     this.props.addSubscribeMail(mail)
   }
 
@@ -67,7 +70,9 @@ class Blog extends Component {
             }
           </div>
         </section>
-        <Subscribe />
+        <Subscribe
+          addSubscribe={this.addSubscribe}
+        />
       </React.Fragment>
 
     )
@@ -75,7 +80,7 @@ class Blog extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
+  console.log('state.data',state.data);
   return {
     section: state.data.section,
     getSection: state.data.getSection,

@@ -8,10 +8,11 @@ export default (props) => {
       <p className="subscribe__title">Subscribe to Newsletter</p>
       <form
         className="subscribe__form"
-        // onSubmit={(e) => addSubscribe(e)}
+        onSubmit={(e) => props.addSubscribe(e)}
       >
         <input type="email"
           placeholder="Enter your email"
+          onChange={(e) => console.log('console_onChange', e.target.value)}
         />
         <button type="submit">Subscribe now</button>
       </form>

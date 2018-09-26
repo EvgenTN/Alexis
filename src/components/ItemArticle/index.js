@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-  console.log('itemArticle_props', props.blog)
+  // console.log('itemArticle_props', props.blog)
   const {
     blog,
     activeArticle,
