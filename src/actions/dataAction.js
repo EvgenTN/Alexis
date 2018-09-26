@@ -35,3 +35,10 @@ export const changeActivSlide = (id) => {
     payload: id,
   }
 }
+
+export const subscribe = (mail) => {
+  return {
+    type: actionTypes.SUBSCRIBE_NOW,
+    payload: mail,
+  }
+}

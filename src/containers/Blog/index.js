@@ -22,6 +22,11 @@ class Blog extends Component {
 
   filterArticle = (articles, activeArticle) => {
     return articles && articles.filter((item, id) => { return activeArticle !== id })
+  };
+
+  addSubscribe = (e) => {
+    const mail = e.target.value;
+    this.props.addSubscribeMail(mail)
   }
 
   render() {
@@ -79,6 +84,7 @@ const mapDispatchToProps = (dispatch) => {
     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
     addData: data => dispatch(dataAction.addData(data)),
     changeActiveArticle: id => dispatch(dataAction.changeActiveArticle(id)),
+    addSubscribeMail: mail => dispatch(dataAction.subscribe(mail)),
   }
 }
 
