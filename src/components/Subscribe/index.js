@@ -7,8 +7,8 @@ export default (props) => {
     email,
     changeMail,
     addSubscribe,
-    storeMail,
-  } = props;
+    storeMail
+  } =props;
 
   return (
     <div className="subscribe wrapper">
@@ -30,7 +30,14 @@ export default (props) => {
           type="submit"
         >Subscribe now</button>
       </form>
+      <div className="subscribe__success">
+      {
+        storeMail && 
+        <p>{storeMail} is added</p>
+      }
       
+      
+      </div>
     </div>
   )
 }
