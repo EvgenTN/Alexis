@@ -11,6 +11,10 @@ import data from "../../data/blog";
 
 class Blog extends Component {
 
+  state = {
+    email: '',
+  }
+
   componentWillMount() {
     fetch(data)
       .then(response => response.json())
@@ -25,12 +29,20 @@ class Blog extends Component {
     return articles && articles.filter((item, id) => { return activeArticle !== id })
   };
 
-  addSubscribe = (e) => {
+  changeMail = (e) => {
     e.preventDefault();
-    console.log('event', e.target.value);
-    const mail = e.target.value;
-    console.log('mail', mail);
-    this.props.addSubscribeMail(mail)
+    this.setState ({
+      email: e.target.value,
+    })
+  }
+
+  addSubscribe = (email, e) => {
+    e.preventDefault();
+    // console.log('event', e.target.value);
+    this.props.addSubscribeMail(email)
+    this.setState ({
+      email: '',
+    })
   }
 
   render() {
@@ -72,6 +84,8 @@ class Blog extends Component {
         </section>
         <Subscribe
           addSubscribe={this.addSubscribe}
+          changeMail={this.changeMail}
+          email={this.state.email}
         />
       </React.Fragment>
 
