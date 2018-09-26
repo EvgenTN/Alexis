@@ -54,6 +54,7 @@ class Blog extends Component {
       blog,
       activeArticle,
       changeActiveArticle,
+      storeMail,
     } = this.props;
     changeActivePage(match.path);
     // console.log(this.props)
@@ -86,6 +87,7 @@ class Blog extends Component {
           addSubscribe={this.addSubscribe}
           changeMail={this.changeMail}
           email={this.state.email}
+          storeMail={storeMail}
         />
       </React.Fragment>
 
@@ -100,6 +102,7 @@ const mapStateToProps = (state) => {
     getSection: state.data.getSection,
     blog: state.data.blog,
     activeArticle: state.data.activeArticle,
+    storeMail: state.data.mail,
   }
 }
 

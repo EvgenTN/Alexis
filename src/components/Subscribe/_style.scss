@@ -5,7 +5,7 @@
     margin: 150px 0 50px 0;
   }
   &__form{
-    margin-bottom: 150px;
+    margin-bottom: 15px;
     input{
       font-size: 16px;
       height: 50px;
@@ -19,5 +19,13 @@
       border-radius: 0 25px  25px 0;
       outline: none;
     }
+  }
+  &__success{
+    p{
+      font-size: 15px;
+      font-weight: 600;
+      color: $green;
+    }
+    height: 135px;
   }
 }

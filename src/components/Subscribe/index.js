@@ -7,6 +7,7 @@ export default (props) => {
     email,
     changeMail,
     addSubscribe,
+    storeMail
   } =props;
 
   return (
@@ -29,6 +30,14 @@ export default (props) => {
           type="submit"
         >Subscribe now</button>
       </form>
+      <div className="subscribe__success">
+      {
+        storeMail && 
+        <p>{storeMail} is added</p>
+      }
+      
+      
+      </div>
     </div>
   )
 }
