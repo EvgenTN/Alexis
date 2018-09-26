@@ -44,13 +44,32 @@ class Contact extends React.Component {
     }
   }
 
+  sendContact = (e) => {
+    e.preventDefault();
+    this.props.sendMessage({
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      budget: this.state.budget,
+      message: this.state.message,
+    });
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      budget: '',
+      message: '',
+    })
+  }
+
   render() {
-    console.log('thisstate', this.state);
+    // console.log('thisstate', this.state);
     const {
       section,
       match,
       getSection,
       changeActivePage,
+      sendMessage,
     } = this.props;
 
     changeActivePage(match.path);
@@ -59,6 +78,7 @@ class Contact extends React.Component {
         <SectionTitle section={getSection(section, match.path)} />
         <ContactForm
           addMessage={this.addMessage}
+          sendContact={this.sendContact}
         />
       </section>
     )
@@ -66,14 +86,17 @@ class Contact extends React.Component {
 };
 
 const mapStateToProps = (state) => {
+  console.log(state.data);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
+
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
     changeActivePage: path => dispatch(dataAction.changeActivePage(path)),
+    sendMessage: message => dispatch(dataAction.sendMessage(message))
   }
 }
 
