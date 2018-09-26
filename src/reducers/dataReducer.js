@@ -7,6 +7,11 @@ export default (state = [], action) => {
   // console.log('action=> ', action);
 
   switch (action.type) {
+    case actionTypes.SEND_MESSAGE:
+    return {
+      ...state,
+      message: action.payload
+    }
     case actionTypes.CHANGE_ACTIVE_ARTICLE:
       return {
         ...state,
