@@ -31,7 +31,7 @@ class Blog extends Component {
 
   changeMail = (e) => {
     e.preventDefault();
-    this.setState ({
+    this.setState({
       email: e.target.value,
     })
   }
@@ -40,7 +40,7 @@ class Blog extends Component {
     e.preventDefault();
     // console.log('event', e.target.value);
     this.props.addSubscribeMail(email)
-    this.setState ({
+    this.setState({
       email: '',
     })
   }
@@ -54,6 +54,7 @@ class Blog extends Component {
       blog,
       activeArticle,
       changeActiveArticle,
+      storeMail,
     } = this.props;
     changeActivePage(match.path);
     // console.log(this.props)
@@ -86,6 +87,7 @@ class Blog extends Component {
           addSubscribe={this.addSubscribe}
           changeMail={this.changeMail}
           email={this.state.email}
+          storeMail={storeMail}
         />
       </React.Fragment>
 
@@ -94,12 +96,13 @@ class Blog extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state.data',state.data);
+  console.log('state.data', state.data);
   return {
     section: state.data.section,
     getSection: state.data.getSection,
     blog: state.data.blog,
     activeArticle: state.data.activeArticle,
+    storeMail: state.data.mail,
   }
 }
 
