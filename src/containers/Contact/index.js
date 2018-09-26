@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { SectionTitle } from "../../components";
+import { 
+  SectionTitle,
+  ContactForm,
+ } from "../../components";
 import * as dataAction from "../../actions/dataAction";
 
 
@@ -20,6 +23,7 @@ class Contact extends React.Component {
     return (
       <section className="contact background2">
         <SectionTitle section={getSection(section, match.path)} />
+        <ContactForm />
       </section>
     )
   }

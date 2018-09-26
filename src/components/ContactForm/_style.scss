@@ -1,16 +1,14 @@
-.contact {
+.contactForm {
   text-align: center;
+    padding-bottom: 150px;
+
   &__form {
-    margin: 0px auto;
+    margin: 0 auto;
     max-width: 750px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // align-items: center;
     text-align: center;
-    &:last-child{
-      justify-content: center;
-    }
   }
   &__input {
     width: calc(50% - 15px);
@@ -29,5 +27,8 @@
     background-color: $white;
     margin-bottom: 50px;
     text-align: center;
+  }
+  button {
+    margin: 0 auto;
   }
 }
