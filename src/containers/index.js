@@ -9,12 +9,15 @@ import Testimonials from './Testimonials';
 import Pricing from './Pricing';
 import WhySelectUs from './WhySelectUs';
 import Blog from './Blog';
+import Contact from './Contact';
+
 
 
 
 
 
 export {
+  Contact,
   WhySelectUs,
   Pricing,
   Header,
