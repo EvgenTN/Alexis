@@ -11,12 +11,15 @@ import PricingBox from './PricingBox';
 import ItemWhySelectUs from "./ItemWhySelectUs";
 import ItemArticle from './ItemArticle';
 import ActiveArticle from './ActiveArticle';
+import Subscribe from './Subscribe';
+import ContactForm from './ContactForm';
 
 
 
 
 
 export {
+  Subscribe,
   ItemWhySelectUs,
   PricingBox,
   SelectSlider,
@@ -30,4 +33,5 @@ export {
   WorkStep,
   ItemArticle,
   ActiveArticle,
+  ContactForm,
 } 

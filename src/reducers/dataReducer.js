@@ -7,6 +7,11 @@ export default (state = [], action) => {
   // console.log('action=> ', action);
 
   switch (action.type) {
+    case actionTypes.SEND_MESSAGE:
+    return {
+      ...state,
+      message: action.payload
+    }
     case actionTypes.CHANGE_ACTIVE_ARTICLE:
       return {
         ...state,
@@ -29,6 +34,11 @@ export default (state = [], action) => {
       }
     case actionTypes.CHANGE_DATA:
       return [...state];
+    case actionTypes.SUBSCRIBE_NOW:
+      return {
+        ...state,
+        mail: action.payload,
+      }  
     default:
       // console.log(state);
       const random4 = Math.floor(Math.random() * 4);

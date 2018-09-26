@@ -1,5 +1,11 @@
 import * as actionTypes from './actionTypes';
 
+export const sendMessage = (message) => {
+  return {
+    type: actionTypes.SEND_MESSAGE,
+    payload: message
+  }
+}
 export const changeActiveArticle = (id) => {
   return {
     type: actionTypes.CHANGE_ACTIVE_ARTICLE,
@@ -33,5 +39,12 @@ export const changeActivSlide = (id) => {
   return {
     type: actionTypes.CHANGE_ACTIVE_SLIDE,
     payload: id,
+  }
+}
+
+export const subscribe = (mail) => {
+  return {
+    type: actionTypes.SUBSCRIBE_NOW,
+    payload: mail,
   }
 }
